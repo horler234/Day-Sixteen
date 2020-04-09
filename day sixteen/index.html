@@ -11,31 +11,31 @@
   <body>
     <h1>
       Click on the Button below <br>
-      <button id="genNew"></button>
-      <span id="color"></span>
+      <button id="buttonChange"></button>
+      <span id="hexcode"></span>
     </h1>
     
 
 
 
     <script type="text/javascript">
-      const setBg = () => {
+      const randomChange = () => {
         const randomColor = Math.floor(Math.random()*16777215).toString(16);
         document.body.style.backgroundColor = "#" + randomColor;
-        color.innerHTML = "#" + randomColor;
+        hexcode.innerHTML = "#" + randomColor;
       }
 
-      genNew.addEventListener("click", setBg);
-      setBg();
+      buttonChange.addEventListener("click", randomChange);
+      randomChange();
 
-      const setBg2 = () => {
+      const buttonColor = () => {
         const randomColor = Math.floor(Math.random()*16777215).toString(16);
-        document.getElementById('genNew').style.backgroundColor = "#" + randomColor;
-        genNew.innerHTML = "#" + randomColor;
+        document.getElementById('buttonChange').style.backgroundColor = "#" + randomColor;
+        buttonChange.innerHTML = "#" + randomColor;
       }
 
-      genNew.addEventListener("click", setBg2);
-      setBg2();
+      buttonChange.addEventListener("click", buttonColor);
+      buttonColor();
 
     </script>
   </body>
